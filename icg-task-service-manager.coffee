@@ -142,7 +142,7 @@ module.exports = (config, options)->
 
 
       processQ = taskQueue.process options.task, processOpts, (task, cb)->
-        handler.apply(this, [task, options.job, config, cb])
+        handler.apply(this, [task, options, config, cb])
 
 
 ###
