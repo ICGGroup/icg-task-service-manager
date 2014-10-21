@@ -111,7 +111,7 @@ module.exports = (config, options)->
     jobDomain = domain.create()
 
     jobDomain.on "error", (err)->
-      config.log?.error(err)
+      config.log?.error(err.stack)
       setTimeout ()->
         process.exit(1);
       , 5000
@@ -139,6 +139,7 @@ module.exports = (config, options)->
           maxTries: 1000000
         log: config.log
         rethrowErrors: true # this will prevent the task queue from managing the errors that the worker might generate, so that we can manage those properly.
+        concurrency: options.job.maxConcurrency ||= 3
 
 
       processQ = taskQueue.process options.task, processOpts, (task, cb)->

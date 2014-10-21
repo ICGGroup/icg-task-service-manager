@@ -136,7 +136,7 @@
         return cluster.worker.disconnect();
       });
       return jobDomain.run(function() {
-        var processOpts, processQ, taskQueue, _ref3, _ref4, _ref5;
+        var processOpts, processQ, taskQueue, _base, _ref3, _ref4, _ref5;
         if (!config) {
           return (_ref3 = config.log) != null ? _ref3.error("Invalid Config") : void 0;
         }
@@ -159,7 +159,8 @@
             maxTries: 1000000
           },
           log: config.log,
-          rethrowErrors: true
+          rethrowErrors: true,
+          concurrency: (_base = options.job).maxConcurrency || (_base.maxConcurrency = 3)
         };
         return processQ = taskQueue.process(options.task, processOpts, function(task, cb) {
           return handler.apply(this, [task, options, config, cb]);

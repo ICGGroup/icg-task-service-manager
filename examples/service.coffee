@@ -32,7 +32,7 @@ module.exports = ()->
 
   serviceDomain.on "error", (err)->
     # the service will stop when an uptapped error is encountered
-    config.log.error("Untrapped Error", err)
+    config.log.error("Untrapped Error", err.stack)
     # restart after 120 seconds
     restartAfterDelay()
     # serviceDomain.exit()
