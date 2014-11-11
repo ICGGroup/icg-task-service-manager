@@ -1,0 +1,105 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/Users/jdouglas/.nvm/v0.10.21/bin/npm', 'publish' ]
+2 info using npm@2.0.0-beta.0
+3 info using node@v0.10.21
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add spec="." args=[".",null]
+7 verbose cache add local package /Users/jdouglas/github/ICG/icg-task-service-manager
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/jdouglas/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/Users/jdouglas/.npm/icg-task-service-manager/0.3.20/package.tgz',
+10 verbose tar pack   '.' ]
+11 verbose tarball /Users/jdouglas/.npm/icg-task-service-manager/0.3.20/package.tgz
+12 verbose folder .
+13 info prepublish icg-task-service-manager@0.3.20
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/jdouglas/.npm/1f1177db-tar.lock
+16 silly lockFile 6197b224-rvice-manager-0-3-20-package-tgz tar:///Users/jdouglas/.npm/icg-task-service-manager/0.3.20/package.tgz
+17 verbose lock tar:///Users/jdouglas/.npm/icg-task-service-manager/0.3.20/package.tgz /Users/jdouglas/.npm/6197b224-rvice-manager-0-3-20-package-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 6197b224-rvice-manager-0-3-20-package-tgz tar:///Users/jdouglas/.npm/icg-task-service-manager/0.3.20/package.tgz
+21 silly lockFile 6197b224-rvice-manager-0-3-20-package-tgz tar:///Users/jdouglas/.npm/icg-task-service-manager/0.3.20/package.tgz
+22 silly lockFile 3f1e3682-k-service-manager-0-3-20-package /Users/jdouglas/.npm/icg-task-service-manager/0.3.20/package
+23 verbose lock /Users/jdouglas/.npm/icg-task-service-manager/0.3.20/package /Users/jdouglas/.npm/3f1e3682-k-service-manager-0-3-20-package.lock
+24 silly lockFile 3f1e3682-k-service-manager-0-3-20-package /Users/jdouglas/.npm/icg-task-service-manager/0.3.20/package
+25 silly lockFile 3f1e3682-k-service-manager-0-3-20-package /Users/jdouglas/.npm/icg-task-service-manager/0.3.20/package
+26 silly lockFile 3a52ce78- .
+27 silly lockFile 3a52ce78- .
+28 silly publish { name: 'icg-task-service-manager',
+28 silly publish   version: '0.3.20',
+28 silly publish   description: 'ICG Task Service Manager',
+28 silly publish   main: 'icg-task-service-manager.js',
+28 silly publish   directories: { example: 'examples' },
+28 silly publish   dependencies:
+28 silly publish    { async: '^0.9.0',
+28 silly publish      'coffee-script': '^1.8.0',
+28 silly publish      'icg-rest-client': '^0.1.3',
+28 silly publish      'icg-task-queue': '^0.2.9',
+28 silly publish      lodash: '^2.4.1',
+28 silly publish      moment: '^2.8.3',
+28 silly publish      oibackoff: '^1.0.0' },
+28 silly publish   devDependencies: { 'coffee-script': '^1.8.0', winston: '^0.8.1' },
+28 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+28 silly publish   repository:
+28 silly publish    { type: 'git',
+28 silly publish      url: 'https://github.com/ICGGroup/icg-task-service-manager.git' },
+28 silly publish   author: { name: 'Trimeego' },
+28 silly publish   license: 'MIT',
+28 silly publish   bugs: { url: 'https://github.com/ICGGroup/icg-task-service-manager/issues' },
+28 silly publish   homepage: 'https://github.com/ICGGroup/icg-task-service-manager',
+28 silly publish   readme: '## ICG Task Service Manager\n\nThe ICG Task Service Manager provided a mechanism to manager services based upon an underlying task queueing system.  The service manager will call the worker jobs when a new item in available for processing in the queue.\n\n### Required Configuration\n\nThe following configuration elements are required:\n\n    config: {\n      apiBaseUrl: "http://localhost:3000",\n      sessionPath: "ap/sessions",\n      credentials: {\n        user: "USER"\n        password: "SECRET"\n      }\n      jobs: [...]\n    }\n\n\n### Job Configuration\n\n\n    config: {\n      jobs: [\n        task:"email.notification",\n        job: {\n          name:"email.notification",\n          script: "./job-notification"\n        }\n      ]\n    }\n\n\n### Workers\n\nWorkers are exported functions that accept 3 parameters, job options, a config object and a callback.  Note:  Workers must call the callback or subsequent runs will be aborted.  This is to prevent two jobs from overlapping.\n',
+28 silly publish   readmeFilename: 'README.md',
+28 silly publish   gitHead: 'e28416a60cae19575a87875b59ec153ac14bb12d',
+28 silly publish   _id: 'icg-task-service-manager@0.3.20',
+28 silly publish   _shasum: 'd15036f3b8fdb216f670838f5c37089496fbb62a',
+28 silly publish   _from: '.' }
+29 verbose mapToRegistry name icg-task-service-manager
+30 verbose mapToRegistry uri https://registry.npmjs.org/icg-task-service-manager
+31 verbose publish registryBase https://registry.npmjs.org/
+32 verbose request on initialization, where is /icg-task-service-manager
+33 verbose request after pass 1, where is /icg-task-service-manager
+34 verbose request url raw /icg-task-service-manager
+35 verbose request resolving registry [ 'https://registry.npmjs.org/', './icg-task-service-manager' ]
+36 verbose request after pass 2, where is https://registry.npmjs.org/icg-task-service-manager
+37 info retrier registry request attempt 1 at 13:17:05
+38 verbose request id 5a1d59e0bf401fcd
+39 http request PUT https://registry.npmjs.org/icg-task-service-manager
+40 http 403 https://registry.npmjs.org/icg-task-service-manager
+41 verbose headers { date: 'Tue, 11 Nov 2014 20:17:07 GMT',
+41 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+41 verbose headers   'content-type': 'application/json',
+41 verbose headers   'cache-control': 'max-age=60',
+41 verbose headers   'content-length': '4142',
+41 verbose headers   'accept-ranges': 'bytes',
+41 verbose headers   via: '1.1 varnish',
+41 verbose headers   'x-served-by': 'cache-iad2138-IAD',
+41 verbose headers   'x-cache': 'MISS',
+41 verbose headers   'x-cache-hits': '0',
+41 verbose headers   'x-timer': 'S1415737026.449219,VS0,VE554',
+41 verbose headers   'keep-alive': 'timeout=10, max=50',
+41 verbose headers   connection: 'Keep-Alive' }
+42 error publish Failed PUT 403
+43 error Error: forbidden cannot modify pre-existing version: 0.3.20
+43 error old={"name":"icg-task-service-manager","version":"0.3.20","description":"ICG Task Service Manager","main":"icg-task-service-manager.js","directories":{"example":"examples"},"dependencies":{"async":"^0.9.0","coffee-script":"^1.8.0","icg-rest-client":"^0.1.3","icg-task-queue":"^0.2.7","lodash":"^2.4.1","moment":"^2.8.3","oibackoff":"^1.0.0"},"devDependencies":{"coffee-script":"^1.8.0","winston":"^0.8.1"},"scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"https://github.com/ICGGroup/icg-task-service-manager.git"},"author":{"name":"Trimeego"},"license":"MIT","bugs":{"url":"https://github.com/ICGGroup/icg-task-service-manager/issues"},"homepage":"https://github.com/ICGGroup/icg-task-service-manager","gitHead":"d3fd00e221c8ff4c4982a545be458bc7879d4531","_id":"icg-task-service-manager@0.3.20","_shasum":"e9b959024893288f0a0817f26da5a5a9801057ee","_from":".","_npmVersion":"2.0.0-beta.0","_npmUser":{"name":"trimeego","email":"jason.douglas@trimeego.com"},"maintainers":[{"name":"trimeego","email":"jason.douglas@trimeego.com"}],"dist":{"shasum":"e9b959024893288f0a0817f26da5a5a9801057ee","tarball":"http://registry.npmjs.org/icg-task-service-manager/-/icg-task-service-manager-0.3.20.tgz"}}
+43 error new={"name":"icg-task-service-manager","version":"0.3.20","description":"ICG Task Service Manager","main":"icg-task-service-manager.js","directories":{"example":"examples"},"dependencies":{"async":"^0.9.0","coffee-script":"^1.8.0","icg-rest-client":"^0.1.3","icg-task-queue":"^0.2.9","lodash":"^2.4.1","moment":"^2.8.3","oibackoff":"^1.0.0"},"devDependencies":{"coffee-script":"^1.8.0","winston":"^0.8.1"},"scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"https://github.com/ICGGroup/icg-task-service-manager.git"},"author":{"name":"Trimeego"},"license":"MIT","bugs":{"url":"https://github.com/ICGGroup/icg-task-service-manager/issues"},"homepage":"https://github.com/ICGGroup/icg-task-service-manager","readme":"## ICG Task Service Manager\u000a\u000aThe ICG Task Service Manager provided a mechanism to manager services based upon an underlying task queueing system.  The service manager will call the worker jobs when a new item in available for processing in the queue.\u000a\u000a### Required Configuration\u000a\u000aThe following configuration elements are required:\u000a\u000a    config: {\u000a      apiBaseUrl: \"http://localhost:3000\",\u000a      sessionPath: \"ap/sessions\",\u000a      credentials: {\u000a        user: \"USER\"\u000a        password: \"SECRET\"\u000a      }\u000a      jobs: [...]\u000a    }\u000a\u000a\u000a### Job Configuration\u000a\u000a\u000a    config: {\u000a      jobs: [\u000a        task:\"email.notification\",\u000a        job: {\u000a          name:\"email.notification\",\u000a          script: \"./job-notification\"\u000a        }\u000a      ]\u000a    }\u000a\u000a\u000a### Workers\u000a\u000aWorkers are exported functions that accept 3 parameters, job options, a config object and a callback.  Note:  Workers must call the callback or subsequent runs will be aborted.  This is to prevent two jobs from overlapping.\u000a","readmeFilename":"README.md","gitHead":"e28416a60cae19575a87875b59ec153ac14bb12d","_id":"icg-task-service-manager@0.3.20","_shasum":"d15036f3b8fdb216f670838f5c37089496fbb62a","_from":".","_npmVersion":"2.0.0-beta.0","_npmUser":{"name":"trimeego","email":"jason.douglas@trimeego.com"},"maintainers":[{"name":"trimeego","email":"jason.douglas@trimeego.com"}],"dist":{"shasum":"d15036f3b8fdb216f670838f5c37089496fbb62a","tarball":"http://registry.npmjs.org/icg-task-service-manager/-/icg-task-service-manager-0.3.20.tgz"}}: icg-task-service-manager
+43 error     at RegClient.<anonymous> (/Users/jdouglas/.nvm/v0.10.21/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:245:14)
+43 error     at Request._callback (/Users/jdouglas/.nvm/v0.10.21/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:183:65)
+43 error     at Request.self.callback (/Users/jdouglas/.nvm/v0.10.21/lib/node_modules/npm/node_modules/request/request.js:123:22)
+43 error     at Request.EventEmitter.emit (events.js:98:17)
+43 error     at Request.<anonymous> (/Users/jdouglas/.nvm/v0.10.21/lib/node_modules/npm/node_modules/request/request.js:1047:14)
+43 error     at Request.EventEmitter.emit (events.js:117:20)
+43 error     at IncomingMessage.<anonymous> (/Users/jdouglas/.nvm/v0.10.21/lib/node_modules/npm/node_modules/request/request.js:998:12)
+43 error     at IncomingMessage.EventEmitter.emit (events.js:117:20)
+43 error     at _stream_readable.js:920:16
+43 error     at process._tickCallback (node.js:415:13)
+44 error If you need help, you may report this *entire* log,
+44 error including the npm and node versions, at:
+44 error     <http://github.com/npm/npm/issues>
+45 error System Darwin 14.0.0
+46 error command "node" "/Users/jdouglas/.nvm/v0.10.21/bin/npm" "publish"
+47 error cwd /Users/jdouglas/github/ICG/icg-task-service-manager
+48 error node -v v0.10.21
+49 error npm -v 2.0.0-beta.0
+50 verbose exit [ 1, true ]
