@@ -1,6 +1,6 @@
 {
   "name": "icg-task-service-manager",
-  "version": "0.3.21",
+  "version": "0.3.22",
   "description": "ICG Task Service Manager",
   "main": "icg-task-service-manager.js",
   "directories": {
@@ -10,7 +10,7 @@
     "async": "^0.9.0",
     "coffee-script": "^1.8.0",
     "icg-rest-client": "^0.1.3",
-    "icg-task-queue": "^0.2.9",
+    "icg-task-queue": "^0.2.10",
     "lodash": "^2.4.1",
     "moment": "^2.8.3",
     "oibackoff": "^1.0.0"
